@@ -20,7 +20,7 @@ public class KMPMatch {
         failure[0] = -1;
         for (int j = 1; j < pattern.length(); j++) {
             i = failure[j - 1];
-            while (i > 0 && pattern.charAt(j) != pattern.charAt(i + 1)) {
+            while (i >= 0 && pattern.charAt(j) != pattern.charAt(i + 1)) {
                 i = failure[i];
             }
             if (pattern.charAt(j) == pattern.charAt(i + 1)) {
