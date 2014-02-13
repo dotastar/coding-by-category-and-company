@@ -1,4 +1,4 @@
-package ZillowSDECodingTest;
+package zillow;
 
 import java.io.IOException;
 import java.util.ArrayList;

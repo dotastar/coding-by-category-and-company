@@ -1,4 +1,4 @@
-package Originate;
+package originate;
 
 public class Questions2 {
     public static String removeNonLetter(String src) {

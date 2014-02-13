@@ -1,4 +1,4 @@
-package FreePractise;
+package freepractise;
 
 
 public class HashMapWithEntry<K, V> {

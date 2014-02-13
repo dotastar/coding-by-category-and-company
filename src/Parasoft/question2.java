@@ -1,4 +1,4 @@
-package Parasoft;
+package parasoft;
 
 public class question2 {
 

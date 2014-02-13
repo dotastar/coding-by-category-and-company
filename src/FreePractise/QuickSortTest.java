@@ -1,4 +1,4 @@
-package FreePractise;
+package freepractise;
 
 public class QuickSortTest {
     public static int partition(int[] a, int p, int r) {

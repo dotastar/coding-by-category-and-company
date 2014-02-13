@@ -1,4 +1,4 @@
-package Originate;
+package originate;
 
 import java.util.ArrayList;
 

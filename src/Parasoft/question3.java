@@ -1,4 +1,4 @@
-package Parasoft;
+package parasoft;
 
 import java.io.IOException;
 

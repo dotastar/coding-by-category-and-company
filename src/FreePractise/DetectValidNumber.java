@@ -1,4 +1,4 @@
-package FreePractise;
+package freepractise;
 
 import java.io.IOException;
 
