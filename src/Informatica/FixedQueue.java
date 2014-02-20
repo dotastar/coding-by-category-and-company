@@ -40,6 +40,7 @@ public class FixedQueue {
             tail = (tail + 1) % fixQueue.length;
             elemSize = elemSize < fixQueue.length ? elemSize + 1 : elemSize;
         }
+        System.out.println("enqueue--");
         System.out.println("head " + head + " - " + "Tail" + tail);
     }
 
@@ -50,6 +51,7 @@ public class FixedQueue {
         int temp = fixQueue[head];
         head = (head + 1) % fixQueue.length;
         elemSize = elemSize - 1;
+        System.out.println("dequeue**");
         System.out.println("head " + head + " - " + "Tail" + tail);
         return temp;
     }
@@ -62,6 +64,9 @@ public class FixedQueue {
         test.enqueue(3);
         test.dequeue();
         test.dequeue();
+        test.dequeue();
+        test.enqueue(4);
+        test.enqueue(5);
         test.dequeue();
         test.dequeue();
     }
