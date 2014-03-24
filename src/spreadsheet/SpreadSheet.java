@@ -1,4 +1,4 @@
-package quantcast.version2;
+package spreadsheet;
 
 import java.util.ArrayList;
 import java.util.Scanner;

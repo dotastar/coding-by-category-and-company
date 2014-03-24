@@ -1,4 +1,4 @@
-package quantcast.version2;
+package spreadsheet;
 
 public class CyclicDependencyException extends Exception {
 
