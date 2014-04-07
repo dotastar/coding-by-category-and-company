@@ -9,7 +9,7 @@ import java.util.Collections;
 
 public class Solution {
     /**
-     * Find the number for each element: start later and finish early. 
+     * Auto Racer Find the number for each element: start later and finish early. 
      * @author NanZhang
      *
      */
