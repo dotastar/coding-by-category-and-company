@@ -1,3 +1,15 @@
+/*******************************************************************************
+ * Copyright (c) 2014 Nan Zhang.
+ * 
+ *        Filename:   SwapTwoElesInList.java
+ *         Version:   1.0
+ *         Created:   4/24 
+ *          Author:   Nan Zhang 
+ *    Organization:   https://github.com/Nan-Zhang
+ *            Note:   swap each two elements in a list. eg. a, b, c, d, e -> b, a, d, c, e
+ *            
+ * All rights reserved.
+ ******************************************************************************/
 package yahoo;
 
 import zn.util.ListNode;

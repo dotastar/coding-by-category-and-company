@@ -1,3 +1,15 @@
+/*******************************************************************************
+ * Copyright (c) 2014 Nan Zhang.
+ * 
+ *        Filename:   FindMaxLessThanInBST.java
+ *         Version:   1.0
+ *         Created:   4/24 
+ *          Author:   Nan Zhang 
+ *    Organization:   https://github.com/Nan-Zhang
+ *            Note:   find the maximum value which is less than the target value in BST.(see evernote)
+ *            
+ * All rights reserved.
+ ******************************************************************************/
 package yahoo;
 
 import java.io.IOException;
