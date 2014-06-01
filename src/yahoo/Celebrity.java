@@ -26,9 +26,6 @@ public class Celebrity {
                 candidate = i;
             }
         }
-        if (candidate == -1) {
-            return -1;
-        }
         for (int i = 0; i < persons.length; i++) {
             if (i != candidate && !knows(persons[i], persons[candidate])) {
                 return -1;
