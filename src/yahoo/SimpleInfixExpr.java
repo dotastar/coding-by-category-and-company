@@ -15,7 +15,7 @@ package yahoo;
 
 public class SimpleInfixExpr {
     /**
-     * my programming style
+     * my programming idea
      */
     public double computeInfixExpr(String input) {
         String[] expr = input.split(" ");
@@ -57,7 +57,7 @@ public class SimpleInfixExpr {
     }
 
     /**
-     * another programming style
+     * CJ's programming idea
      */
     public double computeInfixExpr2(String input) {
         String[] expr = input.split(" ");

@@ -15,7 +15,15 @@ package yahoo;
 
 public class RandN {
     
+    /**
+     * assume n >= 1
+     * @param n
+     * @return
+     */
     public int randomN(int n){
+        if(n == 1){
+            return random1();
+        }
         int bitsNum = getNumbits(n), i = 0, res = 0;
         while(i < Integer.MAX_VALUE){//max_iteration
             res = 0;

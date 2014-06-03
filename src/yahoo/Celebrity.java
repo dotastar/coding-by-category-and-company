@@ -14,6 +14,12 @@
 package yahoo;
 
 public class Celebrity {
+    
+    /**
+     * time complexity is 3 * (n - 1)
+     * @param persons
+     * @return
+     */
     public int search(int[] persons) {
         if (persons.length < 1) {
             return -1;
