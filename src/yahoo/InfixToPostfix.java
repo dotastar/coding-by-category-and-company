@@ -6,7 +6,7 @@
  *         Created:   6/2 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
- *            Note:   Infix to Postfix Conversion, the intuition please see my gist
+ *            Note:   Infix to Postfix Conversion, the intuition please see my Gist
  *            
  * All rights reserved.
  ******************************************************************************/
