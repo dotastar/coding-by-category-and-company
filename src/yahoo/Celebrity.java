@@ -54,4 +54,8 @@ public class Celebrity {
     private boolean knows(int pA, int pB) {
         return true;
     }
+    
+    public static void main(String[] args) {
+        int a = Math.abs(4);
+    }
 }
