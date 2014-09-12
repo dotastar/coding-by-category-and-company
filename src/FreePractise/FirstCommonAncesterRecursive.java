@@ -1,6 +1,6 @@
 package freepractise;
 
-import zn.util.TreeNode;
+import util.TreeNode;
 
 public class FirstCommonAncesterRecursive {
 

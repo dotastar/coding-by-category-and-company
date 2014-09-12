@@ -12,7 +12,7 @@
  ******************************************************************************/
 package yahoo;
 
-import zn.util.ListNode;
+import util.ListNode;
 
 public class SwapTwoElesInList {
     public ListNode swap(ListNode head){

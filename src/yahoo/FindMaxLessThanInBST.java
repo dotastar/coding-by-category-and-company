@@ -14,7 +14,7 @@ package yahoo;
 
 import java.io.IOException;
 
-import zn.util.TreeNode;
+import util.TreeNode;
 
 public class FindMaxLessThanInBST {
 
