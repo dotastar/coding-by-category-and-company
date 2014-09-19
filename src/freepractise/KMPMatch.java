@@ -1,7 +1,5 @@
 package freepractise;
 
-import java.util.Arrays;
-
 public class KMPMatch {
 
     private String string;
