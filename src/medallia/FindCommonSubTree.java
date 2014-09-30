@@ -1,3 +1,15 @@
+/*******************************************************************************
+ * Copyright (c) 2014 Nan Zhang.
+ * 
+ *        Filename:   FindCommonSubTree.java
+ *         Created:   9/23
+ *          Author:   Nan Zhang 
+ *    Organization:   https://github.com/Nan-Zhang
+ *            Note:   how to find the maxmum common subtree
+ *                    (the id of each node does not matter, just the structure of the subtrees be the same).
+ *            
+ * All rights reserved.
+ ******************************************************************************/
 package medallia;
 
 import java.util.ArrayList;
@@ -22,14 +34,13 @@ public class FindCommonSubTree {
         }
     }
 
-    private static List<Node> getLargestCommonSubtrees(Node root) {
-        // YOUR CODE HERE
+    public static List<Node> getLargestCommonSubtrees(Node root) {
         HashMap<String, ArrayList<Node>> map = new HashMap<String, ArrayList<Node>>();
         LinkedList<Node> queue = new LinkedList<Node>();
         queue.add(root);
         while (!queue.isEmpty()) {
             Node cur = queue.pollFirst();
-            String sig = getSignature(cur);
+            String sig = serialize(cur);
             if (map.containsKey(sig)) {
                 ArrayList<Node> list = map.get(sig);
                 list.add(cur);
@@ -58,7 +69,7 @@ public class FindCommonSubTree {
         return ans;
     }
 
-    private static String getSignature(Node n) {
+    private static String serialize(Node n) {
         String signature = "";
         LinkedList<Node> q = new LinkedList<Node>();
         q.add(n);
