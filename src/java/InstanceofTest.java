@@ -2,7 +2,7 @@ package java;
 
 import java.util.ArrayList;
 
-public class TestInstanceofInheritance {
+public class InstanceofTest {
     public static class people {
         private int a;
         public people() {
