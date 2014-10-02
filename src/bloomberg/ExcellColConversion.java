@@ -19,6 +19,8 @@ package bloomberg;
 
 import java.util.ArrayList;
 
+import junit.framework.Assert;
+
 public class ExcellColConversion {
     public static String convert(int input) {
         ArrayList<Integer> list = new ArrayList<Integer>();
@@ -46,9 +48,31 @@ public class ExcellColConversion {
         return ans.toString();
     }
 
+    //this is CJ's answer, find correct AAA's index, then apply 26 scale based on that
+    public static String convert2(int input) {
+        int k = 1, sum = (int) Math.pow(26, k);
+        while (sum <= input) {
+            k++;
+            sum += (int) Math.pow(26, k);
+        }
+        sum = sum - (int) Math.pow(26, k);
+        StringBuilder sb = new StringBuilder();
+        input = input - sum;
+        while (input > 0) {
+            sb.insert(0, (char) ('A' + input % 26));
+            input = input / 26;
+        }
+        int len = sb.length();
+        for (int i = 0; i < (k - len); i++) {
+            sb.insert(0, 'A');
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         for (int i = 0; i <= 27 * 26 * 27; i++) {
-            System.out.println(convert(i));
+            Assert.assertEquals(convert(i), convert2(i));
         }
+        System.out.println("test complete!");
     }
 }

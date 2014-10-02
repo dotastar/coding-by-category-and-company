@@ -2,11 +2,11 @@
  * Copyright (c) 2014 Nan Zhang.
  * 
  *        Filename:   InfixToPostfix.java
- *         Version:   1.0
  *         Created:   6/2 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
- *            Note:   Infix to Postfix Conversion, the intuition please see my Gist
+ *            Note:   Infix to Postfix Conversion
+ *                    https://gist.github.com/Nan-Zhang/fb51935fd7147d4c5ae3#file-infix-to-postfix
  *            
  * All rights reserved.
  ******************************************************************************/
@@ -54,7 +54,7 @@ public class InfixToPostfix {
                 sb.append(" " + stack.pop());
             } else {
                 if (cur.equals(")")) {
-                    stack.pop();//pop out "("
+                    stack.pop();//NOTE pop out "("
                 }
                 break;
             }

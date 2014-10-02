@@ -2,11 +2,12 @@
  * Copyright (c) 2014 Nan Zhang.
  * 
  *        Filename:   Celebrity.java
- *         Version:   1.0
  *         Created:   5/30
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   find a celebrity who doesn't know anyone else, but is known by all anyone else
+ *                    This celebrity may exist, or may not.
+ *                    We also have a hypothetical function knows(A, B) which returns true if A knows B, false otherwise.
  *            
  * All rights reserved.
  ******************************************************************************/
@@ -17,19 +18,15 @@ public class Celebrity {
     
     /**
      * time complexity is 3 * (n - 1)
-     * @param persons
-     * @return
      */
     public int search(int[] persons) {
         if (persons.length < 1) {
             return -1;
         }
-        int candidate = -1;
-        for (int i = 0; i < persons.length - 1; i++) {
-            if (knows(persons[i], persons[i + 1])) {
+        int candidate = persons[0];
+        for (int i = 1; i < persons.length; i++) {
+            if (knows(candidate, persons[i + 1])) {
                 candidate = i + 1;
-            } else {
-                candidate = i;
             }
         }
         for (int i = 0; i < persons.length; i++) {
@@ -45,17 +42,7 @@ public class Celebrity {
         return persons[candidate];
     }
 
-    /**
-     * this interface is provided by outside
-     * @param pA
-     * @param pB
-     * @return
-     */
     private boolean knows(int pA, int pB) {
         return true;
-    }
-    
-    public static void main(String[] args) {
-        int a = Math.abs(4);
     }
 }

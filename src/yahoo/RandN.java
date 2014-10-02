@@ -2,7 +2,6 @@
  * Copyright (c) 2014 Nan Zhang.
  * 
  *        Filename:   RandN.java
- *         Version:   1.0
  *         Created:   5/31
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
@@ -15,12 +14,7 @@ package yahoo;
 
 public class RandN {
     
-    /**
-     * assume n >= 1
-     * @param n
-     * @return
-     */
-    public int randomN(int n){
+    public int randomN(int n){//assume n >= 1
         if(n == 1){
             return random1();
         }
@@ -28,7 +22,7 @@ public class RandN {
         while(i < Integer.MAX_VALUE){//max_iteration
             res = 0;
             while(bitsNum > 0){
-                res = res * 2;
+                res = res << 1;
                 res += random1();
                 bitsNum--;
             }
@@ -50,10 +44,9 @@ public class RandN {
     }
     
     /**
-     * this interface is provided by outside 
-     * @return
+     * this interface is provided by outside to generate 0/1 with equal probability 
      */
     private int random1(){
-        return 0;
+        return 0 + (int)(Math.random() * (1 - 0 + 1));
     }
 }

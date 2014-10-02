@@ -2,11 +2,11 @@
  * Copyright (c) 2014 Nan Zhang.
  * 
  *        Filename:   FindMaxLessThanInBST.java
- *         Version:   1.0
  *         Created:   4/24 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
- *            Note:   find the maximum value which is less than the target value in BST.(see evernote)
+ *            Note:   How to find largest element smaller than K in a BST(may has duplicates)
+ *                    http://stackoverflow.com/questions/6334514/to-find-largest-element-smaller-than-k-in-a-bst
  *            
  * All rights reserved.
  ******************************************************************************/
@@ -16,27 +16,26 @@ import java.io.IOException;
 
 import util.TreeNode;
 
-public class FindMaxLessThanInBST {
+public class FindMaxLessThanKInBST {
 
     public int search(TreeNode root, int target) throws IOException {
         if (root == null) {
             throw new IOException("root cannot be null");
         }
-        TreeNode cur = root;
-        int max = Integer.MIN_VALUE;
-        while (cur != null) {
-            max = cur.val < target ? Math.max(max, cur.val) : max;
-            if (target <= cur.val) {
-                cur = cur.left;
+        int ans = target; 
+        while (root != null) {
+            if (target <= root.val) {
+                root = root.left;
             } else {
-                cur = cur.right;
+                ans = root.val;
+                root = root.right;
             }
         }
-        return max;
+        return ans;
     }
     
     public static void main(String[] args) throws IOException {
-        FindMaxLessThanInBST test = new FindMaxLessThanInBST();
+        FindMaxLessThanKInBST test = new FindMaxLessThanKInBST();
         TreeNode node1 = new TreeNode(-5);
         TreeNode node2 = new TreeNode(1);
         TreeNode node3 = new TreeNode(-1);

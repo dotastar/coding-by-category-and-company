@@ -1,9 +1,8 @@
 /*******************************************************************************
  * Copyright (c) 2014 Nan Zhang.
  * 
- *        Filename:   SwapTwoElesInList.java
- *         Version:   1.0
- *         Created:   4/24 
+ *        Filename:   SwapEachTwoNodeInList.java
+ *         Created:   4/24
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   swap each two elements in a list. eg. a, b, c, d, e -> b, a, d, c, e
@@ -14,27 +13,24 @@ package yahoo;
 
 import util.ListNode;
 
-public class SwapTwoElesInList {
+public class SwapEachTwoNodeInList {
     public ListNode swap(ListNode head){
-        if(head == null){
-            return head;
-        }
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode pre = dummy, cur = dummy, suc = dummy;
-        while(pre.next != null && pre.next.next != null){
-            cur = pre.next;
-            suc = pre.next.next;
+        ListNode pre = dummy, cur = head, suc = head.next;
+        while(cur != null && suc != null){
             pre.next = suc;
             cur.next = suc.next;
             suc.next = cur;
             pre = cur;
+            cur = cur.next;
+            suc = cur == null ? null : cur.next;//NOTE
         }
         return dummy.next;
     }
     
     public static void main(String[] args) {
-        SwapTwoElesInList test = new SwapTwoElesInList();
+        SwapEachTwoNodeInList test = new SwapEachTwoNodeInList();
         ListNode node1 = new ListNode(0);
         ListNode node2 = new ListNode(1);
         ListNode node3 = new ListNode(2);

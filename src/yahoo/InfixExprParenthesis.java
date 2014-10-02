@@ -1,8 +1,7 @@
 /*******************************************************************************
  * Copyright (c) 2014 Nan Zhang.
  * 
- *        Filename:   ComplexInfixExpr.java
- *         Version:   1.0
+ *        Filename:   InfixExprParenthesis.java
  *         Created:   6/03 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
@@ -15,29 +14,29 @@
 
 package yahoo;
 
-public class ComlexInfixExpr {
-    private static int globIdx = 0;
+public class InfixExprParenthesis {
+    private int idx = 0;
     
     public double computeInfixExpr(String input) {
         return compute(input.split(" "));
     }
     
     public double compute(String[] expr) {
-        double operLeft = 0, operRight = expr[globIdx++].equals("(") ? compute(expr) : Double.valueOf(expr[globIdx - 1]);
+        double left = 0, right = expr[idx++].equals("(") ? compute(expr) : Double.valueOf(expr[idx - 1]);
         String lastOptor = "+";
-        while(globIdx < expr.length){
-            String curOptor = expr[globIdx++]; 
+        while(idx < expr.length){
+            String curOptor = expr[idx++]; 
             switch(curOptor){
                 case "*":
-                    operRight = operRight * (expr[globIdx++].equals("(") ? compute(expr) : Double.valueOf(expr[globIdx - 1]));
+                    right = right * (expr[idx++].equals("(") ? compute(expr) : Double.valueOf(expr[idx - 1]));
                     break;
                 case "/":
-                    operRight = operRight / (expr[globIdx++].equals("(") ? compute(expr) : Double.valueOf(expr[globIdx - 1]));
+                    right = right / (expr[idx++].equals("(") ? compute(expr) : Double.valueOf(expr[idx - 1]));
                     break;
                 case "+":
                 case "-":
-                    operLeft = computeTerm(operLeft, lastOptor, operRight);
-                    operRight = (expr[globIdx++].equals("(") ? compute(expr) : Double.valueOf(expr[globIdx - 1]));
+                    left = computeLeft(left, lastOptor, right);
+                    right = (expr[idx++].equals("(") ? compute(expr) : Double.valueOf(expr[idx - 1]));
                     lastOptor = curOptor;
                     break;
             }
@@ -45,23 +44,23 @@ public class ComlexInfixExpr {
                 break;
             }
         }
-        operLeft = computeTerm(operLeft, lastOptor, operRight);
-        return operLeft;
+        left = computeLeft(left, lastOptor, right);
+        return left;
     }
     
-    public double computeTerm(double operLeft, String operator, double operRight){
+    public double computeLeft(double left, String operator, double right){
         switch(operator){
             case "+":
-                return operLeft + operRight;
+                return left + right;
             case "-":
-                return operLeft - operRight;
+                return left - right;
             default:
                 return 0;
         }
     }
     
     public static void main(String[] args) {
-        ComlexInfixExpr test = new ComlexInfixExpr();
+        InfixExprParenthesis test = new InfixExprParenthesis();
         System.out.println(test.computeInfixExpr("2 * ( 2 - 4 ) - ( ( 3 - 1 ) - ( 3 + 1 ) )"));
     }
 }

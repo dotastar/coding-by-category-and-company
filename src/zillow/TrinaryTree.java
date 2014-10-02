@@ -28,14 +28,14 @@ public class TrinaryTree {
 
     public static TreeNode insert(TreeNode root, int val) {
         if (root == null) {
-            return null;
+            return new TreeNode(val);
         }
         if (root.val == val) {
-            root.mid = root.mid == null ? new TreeNode(val) : insert(root.mid, val);
+            root.mid = insert(root.mid, val);
         } else if (root.val < val) {
-            root.right = root.right == null ? new TreeNode(val) : insert(root.right, val);
+            root.right = insert(root.right, val);
         } else {
-            root.left = root.left == null ? new TreeNode(val) : insert(root.left, val);
+            root.left = insert(root.left, val);
         }
         return root;
     }
@@ -73,7 +73,7 @@ public class TrinaryTree {
 
     public static TreeNode testInsertion() throws IOException {
         int[] input = new int[] { 6, 5, 10, 6, 11, 3, 3 };
-        TreeNode root = new TreeNode(input[0]);
+        TreeNode root = TrinaryTree.insert(null, input[0]);
         for (int i = 1; i < input.length; i++) {
             TrinaryTree.insert(root, input[i]);
         }
