@@ -9,7 +9,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package java;
+package javabasic;
 
 public class Deadlock {
     public static void main(String[] args) {

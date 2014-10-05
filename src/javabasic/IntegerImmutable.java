@@ -1,4 +1,4 @@
-package java;
+package javabasic;
 
 public class IntegerImmutable {
 

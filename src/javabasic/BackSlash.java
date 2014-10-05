@@ -1,4 +1,4 @@
-package java;
+package javabasic;
 
 public class BackSlash {
     public static void main(String[] args) {

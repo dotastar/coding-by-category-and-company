@@ -9,7 +9,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package java;
+package javabasic;
 
 import java.util.LinkedList;
 

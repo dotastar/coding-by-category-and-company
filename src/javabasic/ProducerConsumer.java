@@ -11,7 +11,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package java;
+package javabasic;
 
 import java.io.File;
 import java.io.IOException;

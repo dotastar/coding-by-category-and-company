@@ -1,14 +1,14 @@
 package misc;
 
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 public class FirstCommonAncesterRecursive {
 
     public class Res {
-        public TreeNode target = null;
+        public BinaryTreeNode target = null;
     }
 
-    public static int search(TreeNode root, TreeNode et1, TreeNode et2, Res ans) {
+    public static int search(BinaryTreeNode root, BinaryTreeNode et1, BinaryTreeNode et2, Res ans) {
         if(root == null){
             return 0;
         }

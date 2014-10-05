@@ -14,11 +14,11 @@ package yahoo;
 
 import java.io.IOException;
 
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 public class FindMaxLessThanKInBST {
 
-    public int search(TreeNode root, int target) throws IOException {
+    public int search(BinaryTreeNode root, int target) throws IOException {
         if (root == null) {
             throw new IOException("root cannot be null");
         }
@@ -36,11 +36,11 @@ public class FindMaxLessThanKInBST {
     
     public static void main(String[] args) throws IOException {
         FindMaxLessThanKInBST test = new FindMaxLessThanKInBST();
-        TreeNode node1 = new TreeNode(-5);
-        TreeNode node2 = new TreeNode(1);
-        TreeNode node3 = new TreeNode(-1);
-        TreeNode node4 = new TreeNode(-2);
-        TreeNode node5 = new TreeNode(-3);
+        BinaryTreeNode node1 = new BinaryTreeNode(-5);
+        BinaryTreeNode node2 = new BinaryTreeNode(1);
+        BinaryTreeNode node3 = new BinaryTreeNode(-1);
+        BinaryTreeNode node4 = new BinaryTreeNode(-2);
+        BinaryTreeNode node5 = new BinaryTreeNode(-3);
         node1.right = node2;
         node2.left = node3;
         node3.left = node4;

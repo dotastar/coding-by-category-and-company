@@ -12,19 +12,19 @@
  ******************************************************************************/
 package yahoo;
 
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 public class PreorderConstructBST {
 
     private int idx = 0;
 
-    public TreeNode constructRec(int[] input, int min, int max) {
-        TreeNode root = null;
+    public BinaryTreeNode constructRec(int[] input, int min, int max) {
+        BinaryTreeNode root = null;
         if (idx >= input.length) {
             return null;
         }
         if (input[idx] > min && input[idx] < max) {
-            root = new TreeNode(input[idx]);
+            root = new BinaryTreeNode(input[idx]);
             idx++;
             root.left = constructRec(input, min, root.val);
             root.right = constructRec(input, root.val, max);
@@ -32,7 +32,7 @@ public class PreorderConstructBST {
         return root;
     }
 
-    public TreeNode construct(int[] input) {
+    public BinaryTreeNode construct(int[] input) {
         return constructRec(input, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 }

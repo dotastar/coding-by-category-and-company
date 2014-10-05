@@ -1,11 +1,19 @@
 package util;
 
-public class TreeNode {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
+import java.util.ArrayList;
+import java.util.List;
 
-    public TreeNode(int x) {
-        val = x;
+public class TreeNode {
+    public final int id;
+    public final List<TreeNode> children;
+
+    public TreeNode(int id) {
+        this.id = id;
+        this.children = new ArrayList<TreeNode>();
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(id);
     }
 }

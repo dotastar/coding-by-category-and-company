@@ -1,7 +1,7 @@
 /**
  * http://docs.oracle.com/javase/tutorial/java/data/autoboxing.html
  */
-package java;
+package javabasic;
 
 public class IntAndInteger {
     public static boolean isEqual(Integer a, Integer b) {

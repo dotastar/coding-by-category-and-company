@@ -13,21 +13,21 @@
 
 package linkedin;
 
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 public class FlipDownTree {
-    public TreeNode reverseTree(TreeNode root) {
-        TreeNode cur = root, curSib = null;
+    public BinaryTreeNode reverseTree(BinaryTreeNode root) {
+        BinaryTreeNode cur = root, curSib = null;
         while (cur != null) {
-            TreeNode left = cur.left, right = cur.right;
+            BinaryTreeNode left = cur.left, right = cur.right;
             cur.right = curSib;
             cur = left;
             curSib = right;
         }
         cur = root;
-        TreeNode parent = null;
+        BinaryTreeNode parent = null;
         while (cur != null) {
-            TreeNode next = cur.left;
+            BinaryTreeNode next = cur.left;
             cur.left = cur.right;
             cur.right = parent;
             parent = cur;

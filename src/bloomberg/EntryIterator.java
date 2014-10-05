@@ -35,13 +35,13 @@ public class EntryIterator<K, V> {
     }
 
     final Node<K, V> nextNode() {
-        Node<K, V> e = next;
-        if (e == null) {
+        Node<K, V> current = next;
+        if (current == null) {
             throw new NoSuchElementException();
         }
         do {
         } while (index < t.length && (next = t[index++]) == null);
-        return e;
+        return current;
     }
 
     public final void remove() {
