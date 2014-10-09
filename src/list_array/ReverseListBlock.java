@@ -9,7 +9,7 @@
  *            
  * All rights reserved.
  ******************************************************************************/
-package medallia;
+package list_array;
 
 import java.util.Arrays;
 import java.util.List;

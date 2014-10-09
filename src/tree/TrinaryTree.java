@@ -8,7 +8,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package zillow;
+package tree;
 
 import java.io.IOException;
 import junit.framework.Assert;

@@ -10,7 +10,7 @@
  *                    this problem allow use to sort it at first!!! it's not like a subsequence!
  * All rights reserved.
  ******************************************************************************/
-package stringsequence;
+package strings;
 
 import java.io.IOException;
 import java.util.Arrays;

@@ -10,7 +10,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package stringsequence;
+package strings;
 
 public class LongestCommonSubstring {
     public String find(String a, String b) {

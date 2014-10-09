@@ -9,7 +9,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package stringsequence;
+package strings;
 
 import java.util.ArrayList;
 

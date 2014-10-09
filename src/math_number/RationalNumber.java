@@ -1,13 +1,11 @@
-package parasoft;
+package math_number;
 
 import java.io.IOException;
 
-public class question3 {
+public class RationalNumber {
     
     /**
      * how to represent a ratinalNumber
-     * @author hadoop
-     *
      */
     public class rationalNum {
         public int numerator;

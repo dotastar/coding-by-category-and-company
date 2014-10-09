@@ -8,7 +8,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package zillow;
+package strings;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package laserfiche;
+package dp;
 
 /**
  * Facilitates dispensing stamps for a postage stamp machine.
