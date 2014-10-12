@@ -1,4 +1,4 @@
-algorithms
+interview-preparation
 ===================
 
-My Execise for Other Algorithm, Only for Interests
+Just for fun!
