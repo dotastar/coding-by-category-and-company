@@ -9,7 +9,7 @@
  *            
  * All rights reserved.
  ******************************************************************************/
-package misc;
+package stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
