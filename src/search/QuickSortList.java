@@ -10,7 +10,7 @@
  *            
  * All rights reserved.
  ******************************************************************************/
-package misc;
+package search;
 
 
 public class QuickSortList {

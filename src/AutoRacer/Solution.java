@@ -1,4 +1,4 @@
-package rocketFuel;
+package AutoRacer;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

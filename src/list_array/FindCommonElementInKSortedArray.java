@@ -1,6 +1,6 @@
-package misc;
+package list_array;
 
-public class FindCommonElementsInKSortedArray {
+public class FindCommonElementInKSortedArray {
     public static void find(int[][] input) {
         int[] ptrs = new int[input.length];
         for (; ptrs[0] < input[0].length; ptrs[0]++) {
@@ -27,6 +27,6 @@ public class FindCommonElementsInKSortedArray {
                 { 2, 160, 200, 202, 203, },
                 { 3, 150, 155, 160, 300 },
                 { 3, 150, 155, 160, 301 } };
-        FindCommonElementsInKSortedArray.find(data);
+        FindCommonElementInKSortedArray.find(data);
     }
 }

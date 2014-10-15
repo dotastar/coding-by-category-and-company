@@ -9,9 +9,10 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package bloomberg;
+package datastructure;
 
 import java.util.NoSuchElementException;
+
 
 public class EntryIterator<K, V> {
 

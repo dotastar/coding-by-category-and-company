@@ -10,7 +10,7 @@
  *            
  * All rights reserved.
  ******************************************************************************/
-package misc;
+package list_array;
 
 import java.util.ArrayList;
 

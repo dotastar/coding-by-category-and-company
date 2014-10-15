@@ -11,7 +11,7 @@
  *            
  * All rights reserved.
  ******************************************************************************/
-package misc;
+package list_array;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -22,10 +22,6 @@ public class TwoSumWithDuplicates {
      * this solution come from ChangJian, which use hashmap but don't scan it
      * the key is use: Distributive law of multiplication!!!!
      * this solution's advantage is determine the order when forming to pair (eg. {3,3,3,3} given 6)
-     * 
-     * @param src
-     * @param target
-     * @return
      */
     public static int twoSum1(int[] src, int target) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -46,10 +42,6 @@ public class TwoSumWithDuplicates {
     /**
      * this solution is use sorting which need the O(1) space
      * also use Distributive law of multiplication!!!!
-     * 
-     * @param src
-     * @param target
-     * @return
      */
     public static int twoSum2(int[] src, int target) {
         Arrays.sort(src);

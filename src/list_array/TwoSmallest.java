@@ -9,7 +9,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package bloomberg;
+package list_array;
 
 public class TwoSmallest {
     public void findTwoSmallest(int[] data) {

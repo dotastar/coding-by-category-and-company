@@ -9,7 +9,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package bloomberg;
+package datastructure;
 
 import java.util.Map;
 

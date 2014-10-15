@@ -2,7 +2,6 @@
  * Copyright (c) 2014 Nan Zhang.
  * 
  *        Filename:   DisTimeScheduler.java
- *         Version:   1.0
  *         Created:   2/14 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
@@ -10,7 +9,7 @@
  *            
  * All rights reserved.
  ******************************************************************************/
-package yelp;
+package misc;
 
 import java.util.HashSet;
 

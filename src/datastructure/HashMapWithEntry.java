@@ -1,5 +1,4 @@
-package misc;
-
+package datastructure;
 
 public class HashMapWithEntry<K, V> {
 
@@ -53,10 +52,6 @@ public class HashMapWithEntry<K, V> {
 
     /**
      * don't consider the null as key
-     * 
-     * @param key
-     * @param value
-     * @return
      */
     public V put(K key, V value) {
         if (key == null)
@@ -85,9 +80,6 @@ public class HashMapWithEntry<K, V> {
 
     /**
      * insert operation
-     * @param key
-     * @param value
-     * @param bucketIndex
      */
     public void addEntry(K key, V value, int bucketIndex) { 
         Entry<K, V> e = table[bucketIndex];
@@ -133,9 +125,6 @@ public class HashMapWithEntry<K, V> {
 
     /**
      * return: s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
-     * 
-     * @param str
-     * @return
      */
     public int stringHashCode(String str) {
         int h = 0;
@@ -144,8 +133,4 @@ public class HashMapWithEntry<K, V> {
         }
         return h;
     }
-
-    public static void main(String[] args) {
-    }
-
 }

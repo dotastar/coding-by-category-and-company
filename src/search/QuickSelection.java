@@ -1,4 +1,4 @@
-package misc;
+package search;
 
 public class QuickSelection {
     public static int quickSelection(int[] data, int k, int start, int end) {

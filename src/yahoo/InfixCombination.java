@@ -2,7 +2,6 @@
  * Copyright (c) 2014 Nan Zhang.
  * 
  *        Filename:   InfixCombination.java
- *         Version:   1.0
  *         Created:   6/3
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
@@ -13,18 +12,13 @@
  * All rights reserved.
  ******************************************************************************/
 
-package yelp;
+package yahoo;
 
 import java.util.HashSet;
 
 public class InfixCombination {
 
-    /**
-     * Recursive Way, the time complexity is exponential due to the increment of return set size
-     * @param input
-     * @param target
-     * @return
-     */
+    //Recursive Way, the time complexity is exponential due to the increment of return set size
     public boolean check(int[] input, int target) {
         HashSet<Integer> set = combine(input, 0, input.length - 1);
         for (Integer iter : set) {

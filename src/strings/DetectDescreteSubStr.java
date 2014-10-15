@@ -1,18 +1,13 @@
-package misc;
+package strings;
 
 public class DetectDescreteSubStr {
     /**
      * time complexity: O(n) just scan only 1 time; 
      * use greedy idea; cause substr can descrete and can not rotate (so greedy will get the global optimal!)
      * "java"  "jv" is true; "vj" is false
-     * @param src
-     * @param dest
-     * @return
      */
     public static boolean detectDescreteSubStr(String src, String dest) {
-        int i = 0;
-        int j = 0;
-        boolean isFind = false;
+        int i = 0, j = 0;
         while (i < src.length()) {
             if (src.charAt(i) == dest.charAt(j)) {
                 i++;
@@ -21,11 +16,10 @@ public class DetectDescreteSubStr {
                 i++;
             }
             if (j == dest.length()) {
-                isFind = true;
                 break;
             }
         }
-        return isFind;
+        return j == dest.length() ? true : false;
     }
 
     public static void main(String[] args) {
