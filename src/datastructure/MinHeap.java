@@ -18,9 +18,10 @@ public class MinHeap {
 
     public ArrayList<Integer> heap;
 
-    public MinHeap() {
+    public MinHeap(ArrayList<Integer> data) {
         heap = new ArrayList<Integer>();
         heap.add(null);//placeholder, think why? 0->2*0, 2*0 + 1
+        heap.addAll(data);
     }
 
     public void buildHeap() {
@@ -66,8 +67,4 @@ public class MinHeap {
         }
     }
 
-    public static void main(String[] args) {
-        MinHeap test = new MinHeap();
-        System.out.println(test.heap.size());
-    }
 }
