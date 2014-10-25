@@ -6,7 +6,7 @@
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   use segment tree to solve autoracer in nlog time
- *                    my evernote(title: autoracer_segmenttree) 
+ *                    my evernote(title: autoracer_segmenttree)
  *                    
  * All rights reserved.
  ******************************************************************************/

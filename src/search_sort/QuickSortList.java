@@ -10,19 +10,11 @@
  *            
  * All rights reserved.
  ******************************************************************************/
-package search;
+package search_sort;
 
+import util.ListNode;
 
 public class QuickSortList {
-    public static class ListNode {
-        public int val;
-        public ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     public ListNode[] quickSort(ListNode head) {
         if (head == null) {

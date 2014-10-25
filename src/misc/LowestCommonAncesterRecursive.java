@@ -2,7 +2,7 @@ package misc;
 
 import util.BinaryTreeNode;
 
-public class FirstCommonAncesterRecursive {
+public class LowestCommonAncesterRecursive {
 
     public class Res {
         public BinaryTreeNode target = null;

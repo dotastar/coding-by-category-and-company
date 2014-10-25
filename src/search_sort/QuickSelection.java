@@ -1,4 +1,4 @@
-package search;
+package search_sort;
 
 public class QuickSelection {
     public static int quickSelection(int[] data, int k, int start, int end) {

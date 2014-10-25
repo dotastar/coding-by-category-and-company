@@ -1,4 +1,4 @@
-package search;
+package search_sort;
 
 public class Heap {
     public static void heapSort(int[] array) {
