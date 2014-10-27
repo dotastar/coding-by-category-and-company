@@ -8,7 +8,7 @@
  *            Note:   given a set of chars {a1, a2, a3, a4....}, and a set of their frequencies {c1, c2, ....}
  *                    How to encode this set chars to a set of binary codes {l1, l2, l3, ....}
  *                    So that we can get Min(l1*c1 + l2*c2 + ......)
- *                    
+ *                    Time Complexity is O(nlogn)
  * All rights reserved.
  ******************************************************************************/
 package greedy;

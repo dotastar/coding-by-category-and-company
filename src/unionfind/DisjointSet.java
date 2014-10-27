@@ -10,7 +10,7 @@
  *                    Time Compexity is M * logN (M: how many edges, N: how many nodes)
  * All rights reserved.
  ******************************************************************************/
-package yahoo;
+package unionfind;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +47,6 @@ public class DisjointSet {
                 }
             }
         }
-
         return false;
     }
 
