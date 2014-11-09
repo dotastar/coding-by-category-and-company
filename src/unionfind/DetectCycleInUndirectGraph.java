@@ -14,10 +14,10 @@ package unionfind;
 import java.util.HashMap;
 import java.util.Map;
 
-import util.Graph;
+import util.EdgeGraph;
 
 public class DetectCycleInUndirectGraph {
-    public boolean isCycle(Graph g) {
+    public boolean isCycle(EdgeGraph g) {
         int[] set = new int[g.V];
         Map<Integer, Integer> idxMap = new HashMap<Integer, Integer>();
         for (int i = 0; i < g.E; i++) {

@@ -18,10 +18,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import util.Edge;
-import util.Graph;
+import util.EdgeGraph;
 
 public class Kruskal {
-    public ArrayList<Edge> kruskalMST(Graph g) {
+    public ArrayList<Edge> kruskalMST(EdgeGraph g) {
         ArrayList<Edge> ans = new ArrayList<Edge>();
         Collections.sort(g.edges);
         int[] set = new int[g.V];
