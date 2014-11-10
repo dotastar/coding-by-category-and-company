@@ -28,22 +28,22 @@ public class LongestPathInDirAcyclicGraph {
     Stack<Integer> topoAns = new Stack<Integer>();
 
     public void addEdge(int v, int w) {
-        if (graph.containsKey(v)) {
+        if (!graph.containsKey(v)) {
             graph.put(v, new GraphNode(v));
         }
-        if (graph.containsKey(w)) {
+        if (!graph.containsKey(w)) {
             graph.put(w, new GraphNode(w));
         }
-        graph.get(v).neighbors.add(graph.get(w));
+        graph.get(v).adjs.add(graph.get(w));
         visited.put(v, false);
         visited.put(w, false);
     }
 
     public void topologicalSortUtil(int v, HashMap<Integer, Boolean> visited, Stack<Integer> ans) {
         visited.put(v, true);
-        for (GraphNode neighbor : graph.get(v).neighbors) {
-            if (visited.get(neighbor.label) == false) {
-                topologicalSortUtil(neighbor.label, visited, ans);
+        for (GraphNode adj : graph.get(v).adjs) {
+            if (visited.get(adj.label) == false) {
+                topologicalSortUtil(adj.label, visited, ans);
             }
         }
         ans.add(v);
@@ -63,7 +63,7 @@ public class LongestPathInDirAcyclicGraph {
         while (!topoAns.isEmpty()) {
             int u = topoAns.pop();
             if (dist.get(u) != Integer.MIN_VALUE) {
-                for (GraphNode neighbor : graph.get(u).neighbors) {
+                for (GraphNode neighbor : graph.get(u).adjs) {
                     if (dist.get(neighbor.label) < dist.get(u) + graph.get(neighbor.label).weight) {
                         dist.put(neighbor.label, dist.get(u) + graph.get(neighbor.label).weight);
                     }

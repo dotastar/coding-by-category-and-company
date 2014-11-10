@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class GraphNode {
     public int label;
     public int weight;
-    public ArrayList<GraphNode> neighbors;
+    public ArrayList<GraphNode> adjs;
 
     public GraphNode(int x) {
         label = x;
-        neighbors = new ArrayList<GraphNode>();
+        adjs = new ArrayList<GraphNode>();
     }
 }

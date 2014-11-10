@@ -24,13 +24,13 @@ public class DetectCycleInDirectedGraph {
     HashSet<Integer> path = new HashSet<Integer>();//NOTE
     
     public void addEdge(int v, int w){
-        if(graph.containsKey(v)){
+        if(!graph.containsKey(v)){
             graph.put(v, new GraphNode(v));
         }
-        if(graph.containsKey(w)){
+        if(!graph.containsKey(w)){
             graph.put(w, new GraphNode(w));
         }
-        graph.get(v).neighbors.add(graph.get(w));
+        graph.get(v).adjs.add(graph.get(w));
         visited.put(v, false);
         visited.put(w, false);
     }
@@ -47,10 +47,10 @@ public class DetectCycleInDirectedGraph {
     public boolean isCyclicUtil(int v, HashMap<Integer, Boolean> visited, HashSet<Integer> rec){
         visited.put(v, true);
         rec.add(v);
-        for (GraphNode neighbor : graph.get(v).neighbors) {
-            if (visited.get(neighbor.label) == false && isCyclicUtil(neighbor.label, visited, rec)) {
+        for (GraphNode adj : graph.get(v).adjs) {
+            if (visited.get(adj.label) == false && isCyclicUtil(adj.label, visited, rec)) {
                 return true;
-            }else if(rec.contains(neighbor.label)){
+            }else if(rec.contains(adj.label)){
                 return true;
             }
         }

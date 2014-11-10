@@ -20,23 +20,23 @@ public class DepthFirstSearch {
     HashMap<Integer, Boolean> visited = new HashMap<Integer, Boolean>();
 
     public void addEdge(int v, int w) {
-        if (graph.containsKey(v)) {
+        if (!graph.containsKey(v)) {
             graph.put(v, new GraphNode(v));
         }
-        if (graph.containsKey(w)) {
+        if (!graph.containsKey(w)) {
             graph.put(w, new GraphNode(w));
         }
-        graph.get(v).neighbors.add(graph.get(w));
-        graph.get(w).neighbors.add(graph.get(v));
+        graph.get(v).adjs.add(graph.get(w));
+        graph.get(w).adjs.add(graph.get(v));
         visited.put(v, false);
         visited.put(w, false);
     }
 
     public void dfs(int v) {
         visited.put(v, true);
-        for (GraphNode neighbor : graph.get(v).neighbors) {
-            if (visited.get(neighbor.label) == false) {
-                dfs(neighbor.label);
+        for (GraphNode adj : graph.get(v).adjs) {
+            if (visited.get(adj.label) == false) {
+                dfs(adj.label);
             }
         }
     }
