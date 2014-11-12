@@ -10,7 +10,7 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package facebook;
+package datastructure;
 
 import util.Interval;
 import util.IntervalNode;
