@@ -14,7 +14,7 @@
  ******************************************************************************/
 package dp;
 
-public class WhichArrayEndPointNeedToFetch {
+public class PotsOfGold {
     public int computeMaxSum(int[] array) {
         int[][] dp = new int[array.length][array.length];
         for (int i = 0; i < array.length; i++) {
