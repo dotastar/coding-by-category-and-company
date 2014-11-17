@@ -6,7 +6,7 @@
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   Given a int array, and a target number, check whether the combination of array
- *                    can equal the value of target number using +, -, *, /
+ *                    can equal to the value of target number using +, -, *, /
  *                    Here I just give the recursive solution. My DP idea is listed in Gist 
  *            
  * All rights reserved.
@@ -51,7 +51,7 @@ public class InfixCombination {
         set.add(left + right);
         set.add(left - right);
         set.add(left * right);
-        if (left % right == 0)
+        if (right != 0)
             set.add(left / right);
     }
 

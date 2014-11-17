@@ -23,12 +23,15 @@ public class FlattenIterator implements Iterator<String> {
 
     @Override
     public boolean hasNext() {
+        if(nested == null){
+            return false;
+        }
         if(curIterator!=null && curIterator.hasNext()){
             return true;
         }
         while(nested.hasNext()){
             curIterator = nested.next();
-            if(curIterator.hasNext()){
+            if(curIterator != null && curIterator.hasNext()){
                 return true;
             }
         }
