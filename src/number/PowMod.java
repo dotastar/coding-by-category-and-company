@@ -12,7 +12,7 @@
  * All rights reserved.
  ******************************************************************************/
 
-package math_number;
+package number;
 
 public class PowMod {
     

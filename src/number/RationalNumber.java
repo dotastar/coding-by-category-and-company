@@ -9,9 +9,10 @@
  *                    
  * All rights reserved.
  ******************************************************************************/
-package math_number;
+package number;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 public class RationalNumber {
 
@@ -28,7 +29,13 @@ public class RationalNumber {
     public RationalNumber(int numerator, int denomitor) throws IOException {
         if (denomitor == 0)
             throw new IOException("denomitor can not be 0!");
-        this.gcd = GCD(this.numerator, this.denomitor);
+        this.numerator = numerator;
+        this.denomitor = denomitor;
+        if (this.numerator > this.denomitor) {
+            this.gcd = GCD(this.numerator, this.denomitor);
+        } else {
+            this.gcd = GCD(this.denomitor, this.numerator);
+        }
         simplest(this.numerator, this.denomitor);
     }
 
@@ -45,15 +52,29 @@ public class RationalNumber {
         this.denomitor = this.denomitor / gcd;
     }
 
+    //NOTE prints the decimal representation of the rational number "numerator/denominator".
+    //NOTE Since all rational numbers end with a repeating section, print the repeating section of digits inside parentheses
     public void printDecimal() {
-        String decimal = String.valueOf(((double) (this.numerator % this.denomitor) / this.denomitor));
-        decimal.substring(1);
-        decimal = String.valueOf(this.numerator / this.denomitor) + decimal;
-        System.out.println(decimal);
-    }
-
-    public void printFraction() {
-        System.out.println(this.numerator + "/" + this.denomitor);
+        int real = this.numerator / this.denomitor;
+        int remain = this.numerator % this.denomitor;
+        StringBuilder decimal = new StringBuilder();
+        HashMap<Integer, Integer> remainders = new HashMap<Integer, Integer>();
+        for (int i = 0; remain != 0; i++) {
+            if (!remainders.containsKey(remain)) {
+                remainders.put(remain, i);
+            } else {
+                decimal.insert((int) (remainders.get(remain)), '(');
+                break;
+            }
+            remain *= 10;
+            int digit = remain / this.denomitor;
+            remain = remain % this.denomitor;
+            decimal.append(digit);
+        }
+        if (remain != 0) {
+            decimal.append(')');
+        }
+        System.out.println(real + "." + decimal.toString());
     }
 
     public void add(RationalNumber other) {
@@ -66,5 +87,10 @@ public class RationalNumber {
         this.numerator = commonNumerator;
         this.gcd = GCD(this.numerator, this.denomitor);
         simplest(this.numerator, this.denomitor);
+    }
+
+    public static void main(String[] args) throws IOException {
+        RationalNumber test = new RationalNumber(22, 7);
+        test.printDecimal();
     }
 }

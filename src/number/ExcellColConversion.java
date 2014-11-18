@@ -15,7 +15,7 @@
  *                    Ref: https://github.com/Linzertorte/POJ/blob/master/2273AnExcellentProblem.cpp
  * All rights reserved.
  ******************************************************************************/
-package math_number;
+package number;
 
 import java.util.ArrayList;
 
