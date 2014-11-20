@@ -7,7 +7,7 @@
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   The knight is placed on the first block of an empty board and,
  *                    moving according to the rules of chess, must visit each square exactly once.
- *                    knight can move 8 moves at one step
+ *                    knight can move 8 directions at one step
  * All rights reserved.
  ******************************************************************************/
 package backtracking;

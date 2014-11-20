@@ -5,7 +5,7 @@
  *         Created:   Oct 21, 2014 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
- *            Note:   Data structure: insert, remove, contains, get random element, all at O(1)
+ *            Note:   Data structure: insert, remove, contains, get random element, all at O(1) time
  *                    
  * All rights reserved.
  ******************************************************************************/

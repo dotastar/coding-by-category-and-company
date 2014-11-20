@@ -5,7 +5,7 @@
  *         Created:   Oct 17, 2014 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
- *            Note:   How to implement a queue with getMax() in O(1) time complexity
+ *            Note:   How to implement a queue and function getMax() in O(1) time complexity
  *                    
  * All rights reserved.
  ******************************************************************************/

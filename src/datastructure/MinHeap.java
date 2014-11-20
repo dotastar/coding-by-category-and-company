@@ -5,7 +5,7 @@
  *         Created:   Sep 21, 2014 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
- *            Note:   Use ArrayList to implement Heap
+ *            Note:   Use ArrayList to implement Min Heap
  *                    
  * All rights reserved.
  ******************************************************************************/
@@ -30,16 +30,14 @@ public class MinHeap {
         }
     }
 
-    public int getMin() throws IOException {
+    public int popMin() throws IOException {
         if (getSize() == 0) {
-            throw new IOException("heap is empty!");
+            throw new IOException("heap is empty.");
         }
         int lastIdx = heap.size() - 1, minVal = heap.get(1);
         heap.set(1, heap.get(lastIdx));
         heap.remove(lastIdx);
-        if (getSize() > 0) {
-            reConstruct(1, heap.size());
-        }
+        reConstruct(1, heap.size());
         return minVal;
     }
 

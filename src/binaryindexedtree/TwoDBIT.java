@@ -6,7 +6,7 @@
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   2D-BIT applies for range query and single point update for matrix
- *                    
+ *                    eg. how to query the total number of points in a specific rectangle of the matrix
  * All rights reserved.
  ******************************************************************************/
 package binaryindexedtree;

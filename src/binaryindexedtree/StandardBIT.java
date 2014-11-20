@@ -6,8 +6,9 @@
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   Please refer: http://www.hawstein.com/posts/binary-indexed-trees.html
- *                    Evernote
- *                    basic operations for BIT. NOTE we move idx from 0 to 1, which means tree[1] = data[0]
+ *                    Or EVERNOTE_Advanced DataStructure
+ *                    basic operations for BIT. 
+ *                    NOTE we move idx from 0 to 1, which means tree[1] = data[0]
  *                    when we want to get sum in [i, j], we only need to perform read(j + 1) - read(i)
  * All rights reserved.
  ******************************************************************************/
