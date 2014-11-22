@@ -14,7 +14,7 @@
  *                        12      10
  *                    The cost of tree I is 34*1 + 50*2 = 134
  *                    The cost of tree II is 50*1 + 34*2 = 118
- *                    OptCost(i, j) = Sum(freqs(k)): i <= k <= j + Min{optCost(i, r - 1) + optCost(r + 1, j)} : i<= r <= j
+ *                    OptCost(i, j) = [Sum(freqs(k)): i <= k <= j] + Min{optCost(i, r - 1) + optCost(r + 1, j) : i<= r <= j}
  * All rights reserved.
  ******************************************************************************/
 package dp;

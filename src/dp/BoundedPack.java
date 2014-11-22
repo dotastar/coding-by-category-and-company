@@ -29,7 +29,7 @@ public class BoundedPack {
         if (cost * amount >= V) {
             unboundedPack(dp, cost, value, V);
         } else {
-            int k = 1;//NOTE convert it to zeroOnePack, split ith item into 1, 2, 2^2, ..., Mi - (2^k - 1), think why?(in case of exceed Mi)
+            int k = 1;//NOTE convert it to zeroOnePack, split ith item into 1, 2, 2^2, ..., Mi-(2^k-1), think why?(in case of exceed Mi)
             while (k < amount) {
                 zeroOnePack(dp, k * cost, k * value, V);
                 k = k * 2;

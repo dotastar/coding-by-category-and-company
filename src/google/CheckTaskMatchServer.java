@@ -13,7 +13,7 @@
  *                    For this example, the program should say 'true'. 
  *                    Server capacity limits: 1, 3 
  *                    Task capacity needs: 4 
-For this example, program should return false. 
+ *                    For this example, program should return false. 
  * All rights reserved.
  ******************************************************************************/
 package google;

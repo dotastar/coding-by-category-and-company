@@ -12,10 +12,8 @@
 package dp;
 
 public class Cents {
-    /**
-     * we cannot define dp function like this: f(n) = f(n-25)+f(n-10)+f(n-5)+f(n-1)
-     * because we cannot fix the order of subproblems
-     */
+    //NOTE we cannot define dp function like this: f(n) = f(n-25)+f(n-10)+f(n-5)+f(n-1)
+    //because we cannot fix the order of subproblems
     public int findNumOfMakeChange(int total, int[] cents) {
         int[][] dp = new int[cents.length + 1][total + 1];
         for (int i = 0; i <= cents.length; i++) {
@@ -33,7 +31,7 @@ public class Cents {
         return dp[cents.length][total];
     }
 
-  //Time Complexity: O(total * N)
+    //Time Complexity: O(total * N)
     public int findNumOfMakeChangeOptimized(int total, int[] cents) {
         int[] dp = new int[total + 1];
         dp[0] = 1;
@@ -44,7 +42,7 @@ public class Cents {
         }
         return dp[total];
     }
-    
+
     public static void main(String[] args) {
         int[] cent = new int[] { 25, 10, 5, 2, 1 };
         Cents test = new Cents();

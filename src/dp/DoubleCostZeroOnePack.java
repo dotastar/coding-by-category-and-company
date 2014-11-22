@@ -25,7 +25,7 @@ public class DoubleCostZeroOnePack {
     }
 
     /**
-     * Given N items, each item can only be taken by at most once.
+     * NOTE Given N items, each item can only be taken by at most once.
      * Given V, find exact k items from N items to fit in this V, and these K items have the maximum value sum.
      */
     public int search2(int V, int K, int N, int[] cost, int[] value) {

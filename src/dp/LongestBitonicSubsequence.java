@@ -7,7 +7,7 @@
  *    Organization:   https://github.com/Nan-Zhang
  *            Note:   a subsequence of arr[] is called Bitonic if it is first increasing, then decreasing.
  *                    Write a function that takes an array as argument and returns the length of the longest bitonic subsequence. 
- *                    
+ *                    Refer: http://www.geeksforgeeks.org/dynamic-programming-set-15-longest-bitonic-subsequence/
  * All rights reserved.
  ******************************************************************************/
 package dp;

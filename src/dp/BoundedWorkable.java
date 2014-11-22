@@ -5,7 +5,7 @@
  *         Created:   Oct 13, 2014 
  *          Author:   Nan Zhang 
  *    Organization:   https://github.com/Nan-Zhang
- *            Note:   Whether a pack can be filled up with bounded items(Numi <= Mi)    
+ *            Note:   Whether a pack can be filled up with bounded items(NUMi <= Mi)    
  *                    
  * All rights reserved.
  ******************************************************************************/
@@ -18,7 +18,7 @@ public class BoundedWorkable {
      *                dp[i, j] = dp[i - 1, j] || dp[i - 1, j - ci] || ... || dp[i - 1, j - k * ci], k = Min(amount, V/ci)
      *                           ------------    ------------------------------------------------------------------------
      *                            first_part                            second_part
-     * We redefine the sub_problem: dp[i, j] = the max number of remaining ith item if we could use first i type of items to fill up the volume j, or -1 if it cannot be filled up
+     * We redefine the sub_problem: dp[i, j] = the max possible number of remaining ith item if we could use first i type of items to fill up the volume j, or -1 if it cannot be filled up
      * the max number of remaining ith, is for the latter dp usage
      * By redefine the sub_problem, we apply the dp[i][j] to the dp formula, and decrease the time complexity to O(N*V)
      */
