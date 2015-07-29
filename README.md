@@ -1,4 +1,4 @@
 interview-preparation
 ===================
 
-Just for fun!
+Just for fun! Alogrithm
